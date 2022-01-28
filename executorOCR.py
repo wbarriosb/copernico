@@ -140,9 +140,11 @@ def analyzerType3(dlist):
     matcher_sub.add("p3", [pattern_sub])
     pattern_sub= [{"ORTH": "No"}, {"ORTH": "."}, {"ORTH": "DE"}, {"ORTH": "EXPEDIENTE"}, {"IS_PUNCT": True}]
     matcher_sub.add("p4", [pattern_sub])
-    pattern_sub = [{"ORTH": "Razón"}, {"ORTH": "Social"}]
+    # pattern_sub = [{"ORTH": "Razón"}, {"ORTH": "Social"}]
+    pattern_sub = [{"ORTH": "Social"}, {"ORTH": "Clase"}, {"ORTH": "Contribuyente"}]
     matcher_sub.add("p5", [pattern_sub])
-    pattern_sub = [{"ORTH": "Dirección"}, {"ORTH": "Departamento"}, {"ORTH": "Municipio"}]
+    # pattern_sub = [{"ORTH": "Dirección"}, {"ORTH": "Departamento"}, {"ORTH": "Municipio"}]
+    pattern_sub = [{"ORTH": "Departamento"}, {"ORTH": "Municipio"}]
     matcher_sub.add("p6", [pattern_sub])
     for num_line in range(len(dlist)):
         text= dlist[num_line].rstrip('\n')
@@ -217,7 +219,7 @@ def main(tipo, input_file):
             fileList= loadTxt(file_input)
 
             results= findPatterns(fileList)
-            # print(results)
+            print(results)
             resultsOut= results['results']
             size_resultsOut= len(resultsOut)
             if tipo=='1' and size_resultsOut>1:

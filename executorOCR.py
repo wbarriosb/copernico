@@ -88,7 +88,8 @@ def analyzerType1(dlist):
     matcher_sub.add("p4", [pattern_sub])
     pattern_sub = [{"ORTH": "NIT"}, {"ORTH": "D.V"}, {"ORTH": "Razón"}, {"ORTH": "Social"}, {"ORTH": "Clase"}, {"ORTH": "Contribuyente"}]
     matcher_sub.add("p5", [pattern_sub])
-    pattern_sub = [{"ORTH": "Dirección"}, {"ORTH": "Departamento"}, {"ORTH": "Municipio"}]
+    # pattern_sub = [{"ORTH": "Dirección"}, {"ORTH": "Departamento"}, {"ORTH": "Municipio"}]
+    pattern_sub = [{"ORTH": "Departamento"}, {"ORTH": "Municipio"}]
     matcher_sub.add("p6", [pattern_sub])
     #
     for num_line in range(len(dlist)):
